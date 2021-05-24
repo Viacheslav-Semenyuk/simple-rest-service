@@ -29,24 +29,24 @@ public class EmployeeController {
         return employeeService.getById(id);
     }
 
-    @GetMapping()
+    @GetMapping
     public List<Employee> getAll() {
         return employeeService.getAll();
     }
 
-    @PostMapping()
+    @PostMapping
     public void save(@RequestBody Employee employee) {
         employeeService.save(employee);
     }
 
     @PutMapping
-    public Employee update(@RequestBody Employee employee) {
-        return employeeService.update(employee);
+    public Employee putUpdate(@RequestBody Employee employee) {
+        return employeeService.putUpdate(employee);
     }
 
-    @PatchMapping()
-    public Employee updateSalary(@RequestBody EmployeeDto employeeDto) {
-        return employeeService.updateSalary(employeeDto);
+    @PatchMapping
+    public Employee patchUpdate(@RequestBody EmployeeDto employeeDto) {
+        return employeeService.patchUpdate(employeeDto);
     }
 
     @DeleteMapping("/{id}")

@@ -13,9 +13,9 @@ public interface EmployeeService {
 
     List<Employee> getAll();
 
-    Employee update(Employee employee);
+    Employee putUpdate(Employee employee);
 
-    Employee updateSalary(EmployeeDto employeeDto);
+    Employee patchUpdate(EmployeeDto employeeDto);
 
     void deleteById(Long id);
 }
